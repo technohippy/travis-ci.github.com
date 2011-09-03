@@ -62,14 +62,14 @@ $ bundle exec rake
 
 <p>With the exception of <code>git clone</code> command, all of the above steps can be tweaked with <code>.travis.yml</code>.</p>
 
-<h3>Choose a Ruby version</h3>
+<h3>Rubyのバージョンを選択する</h3>
 
 <p>To specify the Ruby version to test against, use the <code>rvm</code> option:</p>
 
 <pre><code>rvm: 1.9.2
 </code></pre>
 
-<h3>Specify a Gemfile</h3>
+<h3>Gemfileを指定する</h3>
 
 <p>You can specify a custom Gemfile name:</p>
 
@@ -83,7 +83,7 @@ $ bundle exec rake
 <pre><code>bundler_args: --binstubs
 </code></pre>
 
-<h3>Set environment variables</h3>
+<h3>環境変数を設定する</h3>
 
 <p>To specify an environment variable:</p>
 
@@ -134,7 +134,7 @@ env:
 
 <p>Only exact matches will be excluded.</p>
 
-<h3>Define a custom build script</h3>
+<h3>カスタムビルドスクリプトを定義する</h3>
 
 <p>You can specify the main build command to run instead of just <code>rake</code>:</p>
 
@@ -153,7 +153,7 @@ after_script:  another_command
 
 <p>These scripts can be used to setup databases used for testing. For more information, see <a href="/docs/user/database-setup/">Database setup</a>.</p>
 
-<h3>Recipients of email &amp; IRC notification</h3>
+<h3>e-mailとIRCによる通知の受信者</h3>
 
 <p>You can specify recipients that will be notified about build results.</p>
 
@@ -182,7 +182,7 @@ after_script:  another_command
   irc: "irc.freenode.org#travis"
 </code></pre>
 
-<h3>Specify branches to build</h3>
+<h3>ビルドするブランチを指定する</h3>
 
 <p>You can either white- or blacklist branches that you want to be built:</p>
 
