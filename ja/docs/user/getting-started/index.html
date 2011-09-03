@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Travis CI: About - Getting started</title>
+    <title>Travis CI: 概要 - はじめに</title>
     <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
   </head>
   <body>
@@ -10,9 +10,9 @@
       <div class="wrapper">
         <a href="http://travis-ci.org" id="logo">travis-ci<span>.org</span></a>
         <ul>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/docs/">Docs</a></li>
-          <li class="right"><a href="http://travis-ci.org">go to travis-ci.org &rarr;</a></li>
+          <li><a href="/blog/">ブログ</a></li>
+          <li><a href="/docs/">ドキュメント</a></li>
+          <li class="right"><a href="http://travis-ci.org">travis-ci.org へ移動&rarr;</a></li>
         </ul>
       </div>
     </div>
@@ -31,7 +31,7 @@
         </div>
         -->
         <h1 class="riddle"><a href="/" title="Travis">Travis CI</a></h1>
-        <p>A distributed build system for the open source community.</p>
+        <p>オープンソースコミュニティのための分散ビルドシステム。</p>
       </div><!-- /.wrapper -->
     </div><!-- /#header -->
 
@@ -40,25 +40,25 @@
         <div class="pad">
           <div id="main">
             
-              <h2>Getting started</h2>
+              <h2>はじめに</h2>
             
 
-            <h3 id="make-sure-your-project-can-build">Make sure your project can build</h3>
+            <h3 id="make-sure-your-project-can-build">プロジェクトがビルドできることを確かめる</h3>
 
 <ul>
-  <li><em>Ruby Projects:</em> In order to build your Ruby project on Travis CI, your repository should have a Rakefile with the default task being a test task. That&rsquo;s it. Travis CI will first run <code>bundle install</code> if you have a Gemfile, and then <code>rake</code> by default. The build success is determined by the response code of that command.</li>
-  <li><em>Erlang projects:</em> In order to build your Erlang project on Travis CI, it should use <a href="https://github.com/basho/rebar.git">Rebar</a>  or have a working <code>tests</code> Makefile target. The build success is determined by the response codes of the compile step and eunit tests. <a href="/docs/user/languages/erlang/">More about Erlang  projects</a></li>
+  <li><em>Rubyプロジェクト:</em> RubyプロジェクトをTravis CIでビルドするには、リポジトリにデフォルトタスクをtestタスクにしたRakefileを用意して下さい。それだけです。Travis CIはデフォルトでは、もしGemfileがあれば、まず<code>bundle install</code>を実行し、それから<code>rake</code>を実行します。ビルドが成功したことはコマンドのレスポンスコードによって判断されます。</li>
+  <li><em>Erlangプロジェクト:</em> ErlangプロジェクトをTravis CIでビルドするには、<a href="https://github.com/basho/rebar.git">Rebar</a>を利用するか、testsというMakefileターゲットが必要です。ビルドの成功はコンパイルステップのレスポンスコードとeunitテストによって判断されます。<a href="/docs/user/languages/erlang/">Erlangプロジェクトについての詳細</a></li>
 </ul>
 
-<p>You can <a href="/docs/user/build-configuration/">configure</a> all aspects of this, including the <a href="/docs/user/database-setup/">database connection</a> if you need one.</p>
+<p>もし必要なら<a href="/docs/user/database-setup/">データ接続</a>を含むあらゆる側面を<a href="/docs/user/build-configuration/">設定</a>できます。
 
-<h3 id="sign-in">Sign in</h3>
+<h3 id="sign-in">サインイン</h3>
 
-<p>To get started with Travis CI, sign in through Github OAuth. Go to <a href="http://travis-ci.org">Travis CI</a> and follow the sign in link.</p>
+<p>Travis CIの利用を始めるには、Github OAuthを使ってサインインする必要があります。<a href="http://travis-ci.org">Travis CI</a>に行き、sign inリンクをクリックして下さい。</p>
 
-<p>Github will ask you for granting read- and write access. Travis CI needs write access for setting up service hooks for your repositories when you request it, but it won&rsquo;t touch anything else.</p>
+<p>Githubは読み書きのアクセス権限を与えるように要求します。Travis CIはあなたのリクエストに応じてリポジトリにサービスフックを設定するために書き込み権限を必要としますが、それ以外の部分には一切触れません。</p>
 
-<h3 id="add-service-hooks">Add service hooks</h3>
+<h3 id="add-service-hooks">サービスフックの追加</h3>
 
 <p>Once you&rsquo;re signed in go to your <a href="http://travis-ci.org/profile">profile page</a>. You&rsquo;ll see a list of your repositories. Flip the on/off switch for each repository that you want to hook up on Travis CI.</p>
 
