@@ -58,42 +58,43 @@ $ bundle exec rake
 
 <p>プロジェクトが（Gemfileを持たず）Bundlerを使用していない場合は、<code>rake</code>だけを実行します。</p>
 
-<p>The outcome of this last command – the build script – indicates whether or not this build has failed or passed. The standard unix exit code of &ldquo;0&rdquo; means it passed; everything else is treated as failure.</p>
+<p>最後のコマンド - build script - の結果は、ビルドが成功したか失敗したかを表します。　標準的なunixのexit codeである&ldquo;0&rdquo;が成功を表し、それ以外は全て失敗とみなされます。</p>
 
-<p>With the exception of <code>git clone</code> command, all of the above steps can be tweaked with <code>.travis.yml</code>.</p>
+<p><code>git clone</code>コマンドが失敗すると、上の全ての手順は<code>.travis.yml</code>によって調整されます。</p>
 
 <h3>Rubyのバージョンを選択する</h3>
 
-<p>To specify the Ruby version to test against, use the <code>rvm</code> option:</p>
+<p>テストに使用するRubyのバージョンを指定するには<code>rvm</code>オプションを使用して下さい:</p>
 
 <pre><code>rvm: 1.9.2
 </code></pre>
 
 <h3>Gemfileを指定する</h3>
 
-<p>You can specify a custom Gemfile name:</p>
+<p>独自のGemfile名を指定することもできます:</p>
 
 <pre><code>gemfile: gemfiles/Gemfile.ci
 </code></pre>
 
-<p>Unless specified, the worker will look for a file named &ldquo;Gemfile&rdquo; in the root of your project.</p>
+<p>指定がなければ、ワーカーはプロジェクトのルートから&ldquo;Gemfile&rdquo;という名前のファイルを探します。</p>
 
-<p>You can also set <a href="http://gembundler.com/man/bundle-install.1.html">extra arguments</a> to be passed to <code>bundle install</code>:</p>
+<p>また<code>bundle install</code>に渡すための<a href="http://gembundler.com/man/bundle-install.1.html">追加の引数</a>を設定することもできます:</p>
 
 <pre><code>bundler_args: --binstubs
 </code></pre>
 
 <h3>環境変数を設定する</h3>
 
-<p>To specify an environment variable:</p>
+<p>環境変数を指定するには:</p>
 
 <pre><code>env: DB=postgres
 </code></pre>
 
+<p>環境変数はビルドスクリプトを設定するのに便利です。<a href="/docs/user/database-setup/#multiple-database-systems">データベースの設定</a>にある例を参照して下さい。ある変数、<code>TRAVIS</code>、はビルド実行中は常に存在します:</p>
 <p>Environment variables are useful for configuring build scripts. See the example in <a href="/docs/user/database-setup/#multiple-database-systems">Database setup</a>. One variable is always present during your builds, <code>TRAVIS</code>:</p>
 
 <pre><code>if ENV['TRAVIS']
-  # do something specific to continuous integration
+  # 継続的インテグレーションに固有の何かを実行する
 end
 </code></pre>
 
