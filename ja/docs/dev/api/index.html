@@ -2,17 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Travis CI: About - The Travis API</title>
+    <title>Travis CI: About - Travis API</title>
     <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
   </head>
-  <body>
     <div id="navigation">
       <div class="wrapper">
         <a href="http://travis-ci.org" id="logo">travis-ci<span>.org</span></a>
         <ul>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/docs/">Docs</a></li>
-          <li class="right"><a href="http://travis-ci.org">go to travis-ci.org &rarr;</a></li>
+          <li><a href="/blog/">ブログ</a></li>
+          <li><a href="/docs/">ドキュメント</a></li>
+          <li class="right"><a href="http://travis-ci.org">travis-ci.org へ移動&rarr;</a></li>
         </ul>
       </div>
     </div>
@@ -26,12 +25,13 @@
           <ul>
             <li><a href="/" class="selected">en</a></li>
             <li><a href="/fr/">fr</a></li>
+            <li><a href="/ja/">ja</a></li>
           </ul>
           </nav>
         </div>
         -->
         <h1 class="riddle"><a href="/" title="Travis">Travis CI</a></h1>
-        <p>A distributed build system for the open source community.</p>
+        <p>オープンソースコミュニティのための分散ビルドシステム。</p>
       </div><!-- /.wrapper -->
     </div><!-- /#header -->
 
@@ -40,16 +40,16 @@
         <div class="pad">
           <div id="main">
             
-              <h2>The Travis API</h2>
+              <h2>Travis API</h2>
             
 
-            <h3 id="repositories">Repositories</h3>
+            <h3 id="repositories">リポジトリ</h3>
 
-<h4 id="index">Index</h4>
+<h4 id="index">インデックス</h4>
 <pre><code>http://travis-ci.org/repositories.json
 </code></pre>
 
-<h4 id="response-httptravis-ciorgrepositoriesjson">Response (http://travis-ci.org/repositories.json)</h4>
+<h4 id="response-httptravis-ciorgrepositoriesjson">レスポンス (http://travis-ci.org/repositories.json)</h4>
 
 <pre><code>[
   {
@@ -67,12 +67,12 @@
 
 <p><a href="http://hurl.it/hurls/919a2b3a2ac6dd60239c2548b183fc0a7ba49890/863c0ad50ec63156ec169be3a542d4408fe02d42">Hurl</a></p>
 
-<h4 id="show">Show</h4>
+<h4 id="show">閲覧</h4>
 
 <pre><code>http://travis-ci.org/:owner_name/:name.json
 </code></pre>
 
-<h4 id="response-httptravis-ciorgtravis-citravis-cijson">Response (http://travis-ci.org/travis-ci/travis-ci.json)</h4>
+<h4 id="response-httptravis-ciorgtravis-citravis-cijson">レスポンス (http://travis-ci.org/travis-ci/travis-ci.json)</h4>
 <pre><code>{
   "slug": "travis-ci/travis-ci",
   "last_build_id": 61817,
@@ -87,14 +87,14 @@
 
 <p><a href="http://hurl.it/hurls/1a475b8b354d98647764c8f7d863f5732c2dbc18/33e7c4e5c62612cdbeac17917c6ebd9f8d3d6344">Hurl</a></p>
 
-<h3 id="builds">Builds</h3>
+<h3 id="builds">ビルド</h3>
 
-<h4 id="index-1">Index</h4>
+<h4 id="index-1">インデックス</h4>
 
 <pre><code>http://travis-ci.org/:owner_name/:name/builds.json
 </code></pre>
 
-<h4 id="response-httptravis-ciorgtravis-citravis-cibuildsjson">Response (http://travis-ci.org/travis-ci/travis-ci/builds.json)</h4>
+<h4 id="response-httptravis-ciorgtravis-citravis-cibuildsjson">レスポンス (http://travis-ci.org/travis-ci/travis-ci/builds.json)</h4>
 
 <pre><code>[
   {
@@ -162,12 +162,12 @@
 
 <p><a href="http://hurl.it/hurls/7f51dc1660a6b915159498c19e493637c6395443/ef84212b3be1a146ff07804ec93c689afb81ef72">Hurl</a></p>
 
-<h4 id="show-1">Show</h4>
+<h4 id="show-1">閲覧</h4>
 
 <pre><code>http://travis-ci.org/:owner_name/:name/builds/:id.json
 </code></pre>
 
-<h4 id="response-httptravis-ciorgtravis-citravis-cibuilds63812json">Response (http://travis-ci.org/travis-ci/travis-ci/builds/63812.json)</h4>
+<h4 id="response-httptravis-ciorgtravis-citravis-cibuilds63812json">レスポンス (http://travis-ci.org/travis-ci/travis-ci/builds/63812.json)</h4>
 
 <pre><code>{
   "number": "731.1",
@@ -201,38 +201,38 @@
 
           </div><!-- /#main -->
           <div id="sidebar">
-            <h2>Contact</h2>
+            <h2>連絡先</h2>
             <ul>
               <li><a href="http://github.com/travis-ci">Github</a></li>
               <li><a href="http://twitter.com/travisci">Twitter</a></li>
               <li><a href="irc://irc.freenode.net#travis">IRC</a></li>
-              <li><a href="http://groups.google.com/group/travis-ci">Mailinglist</a></li>
+              <li><a href="http://groups.google.com/group/travis-ci">メーリングリスト</a></li>
             </ul>
-            <h2>User Docs</h2>
+            <h2>ユーザードキュメント</h2>
             <ul>
-              <li><a href="/docs/user/getting-started/">Getting started</a></li>
-              <li><a href="/docs/user/build-configuration/">Build configuration</a></li>
-              <li><a href="/docs/user/database-setup/">Database setup</a></li>
-              <li><a href="/docs/user/status-images/">Status images</a></li>
-              <li><a href="/docs/user/resources/">Resources</a></li>
-              <li><a href="/docs/user/ci-environment/">CI environment</a></li>
+              <li><a href="/docs/user/getting-started/">はじめに</a></li>
+              <li><a href="/docs/user/build-configuration/">ビルドの設定</a></li>
+              <li><a href="/docs/user/database-setup/">データベースの設定</a></li>
+              <li><a href="/docs/user/status-images/">ステータス画像</a></li>
+              <li><a href="/docs/user/resources/">その他の情報</a></li>
+              <li><a href="/docs/user/ci-environment/">CI環境</a></li>
             </ul>
-            <h2>Languages</h2>
+            <h2>言語</h2>
             <ul>
             <li><a href="/docs/user/languages/clojure/">Clojure</a></li>
             <li><a href="/docs/user/languages/erlang/">Erlang</a></li>
                   <li><a href="/docs/user/languages/javascript-with-nodejs/">JavaScript (with Node.js)</a></li>
             <li><a href="/docs/user/languages/ruby/">Ruby</a></li>
            </ul>
-            <h2>Developer Docs</h2>
+            <h2>開発者用ドキュメント</h2>
             <ul>
-              <li><a href="/docs/dev/worker/">The worker</a></li>
-              <li><a href="/docs/dev/api/">The API</a></li>
-              <li><a href="/docs/dev/build_tasks/">Build Tasks</a></li>
+              <li><a href="/docs/dev/worker/">ワーカー</a></li>
+              <li><a href="/docs/dev/api/">API</a></li>
+              <li><a href="/docs/dev/build_tasks/">ビルドタスク</a></li>
             </ul>
-            <h2>Under construction</h2>
+            <h2>工事中</h2>
             <ul>
-              <li><p>Our site is still under construction. You can help us in: travis#irc.freenode.net</p></li>
+              <li><p>このサイトはまだ工事中です。travis#irc.freenode.netに来て協力して下さい</p></li>
             </ul>
           </div><!-- /#sidebar -->
         </div><!-- /.pad -->
@@ -242,14 +242,14 @@
     <div id="footer">
       <div class="wrapper">
         <div class="box">
-          <p>This site is maintained by the <a href="http://github.com/travis-ci">Travis CI community</a>. Feel free to <a href="http://github.com/travis-ci/travis-ci.github.com">contribute</a>!</p>
+          <p>このサイトは<a href="http://github.com/travis-ci">Travis CIコミュニティ</a>によって管理されていいます。<a href="http://github.com/travis-ci/travis-ci.github.com">参加</a>はお気軽に！</p>
         </div>
         <div class="box">
-          <p>This design was kindly provided by the talented Ben Webster of <a href="http://www.plus2.com.au">Plus2</a>.</p>
+          <p>デザインは<a href="http://www.plus2.com.au">Plus2</a>の才能あふれるBen Websterが協力してくれました。</p>
         </div>
         <div class="box last">
           <ul>
-            <li><a href="http://github.com/travis-ci/travis-ci" title="">View the Source</a></li>
+            <li><a href="http://github.com/travis-ci/travis-ci" title="">ソースを見る</a></li>
             <li><a href="http://twitter.com/travisci" title="">Travis CI on Twitter</a></li>
           </ul>
         </div><!-- /.box -->
